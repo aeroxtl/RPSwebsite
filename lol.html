@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+ <head>  
+  <style>
+     body{
+      background-color: aliceblue;
+    }
+     .rps{
+      width:200px;
+      height:50px;
+      border:none;
+      color:#66CDAA;
+      border-radius:20px;
+      box-shadow:inset 0 0 0 0 Bisque;
+      transition: ease-out 0.5s;
+      font-size: 2rem;
+      outline:none;
+      display: block;
+      margin:50px;
+	  animation-name: ani1;
+	  animation-duration: 10s;
+	  animation-iteration-count:infinite;
+    }
+  
+     .rps:hover{
+      box-shadow:inset 100px 150px 200px 250px cadetBlue;
+      cursor:pointer;
+      color:black;
+	  transform: scale(2,2);
+	}
+	
+     .select{
+      position: absolute;
+      left:50%;
+	  top:20%;
+      transform: translateX(-50%);
+      padding:20px;
+      font-family: Verdana;
+    } 
+	
+	 
+	    
+	 @keyframes ani1 {
+      0%   {background-color:aliceblue; left:0px; top:0px;}
+      25%  {background-color:#708090; left:200px; top:0px;}
+      50%  {background-color:#536878; left:200px; top:200px;}
+      75%  {background-color:#708090; left:0px; top:200px;}
+      100% {background-color:aliceblue; left:0px; top:0px;}
+	}
+	
+
+	
+  </style>
+ 
+ </head>
+ 
+  
+ <body>
+    <div class="select" >
+	    
+
+	     <button class="rps" id="button1" onclick="rockFct()">Rock </button>
+		 <button class="rps" id="button2" onclick="paperFct()">Paper </button>
+		 <button  class="rps"id="button3" onclick="scissorsFct()"> Scissors</button>
+ 
+
+    </form>
+
+  <script>
+  
+    function rockFct() { 
+    var choices = ['rock' , 'paper' , 'scissors'];
+	var randNum = Math.floor(Math.random()*3);
+	var computerChoice = choices[randNum];
+	
+	
+	  if (computerChoice == "rock"){
+	    alert ("draw");
+		} else if (computerChoice == "paper") {
+		   alert("You win!!");
+		   } else if (computerChoice == "scissors") {
+		    alert ("You Lose!");
+			}
+	} 
+	
+	function paperFct() {
+	var choices = ['rock' , 'paper' , 'scissors'];
+	var randNum = Math.floor(Math.random()*3);
+	var computerChoice = choices[randNum];
+	
+	
+	  if (computerChoice == "paper"){
+	    alert ("draw");
+		} else if (computerChoice == "scissors") {
+		   alert("You win!!");
+		   } else if (computerChoice == "rock") {
+		    alert ("You Lose!");
+			}
+	}
+	
+	function scissorsFct() {
+	var choices = ['rock' , 'paper' , 'scissors'];
+	var randNum = Math.floor(Math.random()*3);
+	var computerChoice = choices[randNum];
+	
+	
+	  if (computerChoice == "scissors"){
+	    alert ("draw");
+		} else if (computerChoice == "rock") {
+		   alert("You win!!");
+		   } else if (computerChoice == "paper") {
+		    alert ("You Lose!");
+			}
+	} 
+   
+	</script>
+ 
+ </body>
+ 
+</html>
